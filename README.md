@@ -37,17 +37,11 @@
 
 # 📖 [Vet_clinic_database] <a name="Vet clinic database"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[Vet_clinic_database]** This project incluides data about a vet clinic animals.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> PostgreSQL.
-
-> SQL Shell (psql).
 
 <details>
 <summary>Database</summary>
@@ -60,8 +54,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Data_base]**
 - **[SQL]**
 - **[Vet_clinic]**
@@ -72,9 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Coming soon...](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,8 +112,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Marcos Gualtero Lourenzo**
 
 - GitHub: [@githubhandle](https://github.com/Goruchie)
@@ -135,8 +123,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[update_animals_table]**
 - [ ] **[query_multiple_tables]**
@@ -158,19 +144,13 @@ Feel free to check the [issues page](https://github.com/Goruchie/Vet-clinic-data
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank Lucas Bermudez who helped me a lot!
+I would like to thank @Oklukeok who helped me a lot!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
