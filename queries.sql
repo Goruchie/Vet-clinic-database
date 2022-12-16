@@ -51,3 +51,69 @@ SELECT combined.full_name FROM (SELECT o.full_name, COUNT (a.name) AS animal_num
                 GROUP BY o.full_name
               ) AS xx
 );
+
+/* Project - add join tables */
+
+SELECT a.name
+FROM animals a
+    JOIN visits v ON a.id = v.animal_id
+    JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1;
+SELECT COUNT(*)
+FROM (
+        SELECT v.animal_id
+        from visits v
+            JOIN vets ve ON v.vet_id = ve.id
+        WHERE ve.name = 'Stephanie Mendez'
+        GROUP BY v.animal_id
+    ) as xx;
+SELECT ve.name as vet_name,
+    s.name as species_name
+FROM vets ve
+    LEFT JOIN specializations sp ON ve.id = sp.vet_id
+    LEFT JOIN species s ON sp.species_id = s.id;
+SELECT a.name
+FROM animals a
+    JOIN visits v ON a.id = v.animal_id
+    JOIN vets as ve ON v.vet_id = ve.id
+WHERE ve.name = 'Stephanie Mendez'
+    AND v.visit_date BETWEEN 'April 1, 2020' AND 'August 30, 2020';
+SELECT COUNT(v.animal_id) total_animal_visits,
+    a.name as animal_name
+FROM visits v
+    JOIN animals a ON v.animal_id = a.id
+GROUP BY a.name
+ORDER BY total_animal_visits DESC
+LIMIT 1;
+SELECT a.name
+FROM animals a
+    JOIN visits v ON a.id = v.animal_id
+    JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'Maisy Smith'
+ORDER BY v.visit_date ASC
+LIMIT 1;
+SELECT a.name as animal_name,
+    a.date_of_birth as animal_dob,
+    a.escape_attempts,
+    a.neutered,
+    a.weight_kg,
+    ve.name as vet_name,
+    ve.age as vet_age,
+    ve.date_of_graduation as vet_date_of_graduation,
+    v.visit_date
+FROM animals a
+    JOIN visits v ON a.id = v.animal_id
+    JOIN vets ve ON v.vet_id = ve.id
+ORDER BY v.visit_date DESC
+LIMIT 1;
+SELECT count(*) as total_visits,
+    s.name as species_name
+FROM visits v
+    JOIN vets ve ON v.vet_id = ve.id
+    JOIN animals a ON v.animal_id = a.id
+    JOIN species s ON a.species_id = s.id
+WHERE ve.name = 'Maisy Smith'
+GROUP BY s.name
+ORDER BY total_visits DESC;
